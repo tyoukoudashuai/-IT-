@@ -1,0 +1,285 @@
+/* 构成
+
+  btn外壳，
+  内胆三元素，=>整体高度
+  球，
+  文字=>整体宽度 
+
+
+   /* body-buttons */
+  /* btn整体 */
+  /* btn整体边框内余白,背景颜色，边框颜色 */
+    /* ✅可改 */
+
+    /* ⛔不可改 */
+   .viewmorebtn .button-innter {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      overflow: hidden;
+      cursor: pointer;
+      font-family: sans-serif;
+    }
+
+
+/* 内里三元素 */
+  /* 内里三元素内余白，间隔，btn整体高度 */
+    /* ✅可改 */
+
+    /* ⛔不可改 */
+    .viewmorebtn .button-front {
+      display: flex;
+      align-items: center;
+      position: relative;
+      /* z-index: 2; */
+    }
+
+
+/* 箭头球们 */
+  .viewmorebtn .yajirusi-front, .yajirusi-hover {
+    display: flex;
+  }
+  /* 原始球 */
+    /* 球背景，大小，初始位置 */
+    /* ✅可改 */
+
+
+  /* hover球 */
+    /* 大小，位置，背景 */
+    /* ✅可改 */
+
+    /* ⛔不可改 */
+    .viewmorebtn .yajirusi-hover {
+      position: absolute;
+      border-radius: 50px;
+      z-index: 2;
+    }
+    /* 箭头球内图像 */
+    /* ✅可改 */
+
+
+
+
+/* 文本滑动区域 */
+  /* 文字box，高度，宽度 决定整体宽度*/
+      /* ✅可改 */
+
+ .viewmorebtn  .text {
+    overflow: hidden;
+    position: relative;
+  }
+  /* 文字位置 */
+  .viewmorebtn .text p {
+    position: absolute;
+    width: 100%;
+    left: 25;
+    top: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* 文字初始位置，颜色 */
+  /* ✅可改 */
+
+  .viewmorebtn .text p:first-child {
+    top: 7px;         /* 初始显示在上 */
+  }
+  /* ✅可改 */
+
+ .viewmorebtn  .text p:last-child {
+    top: 27px;      /* 初始在下方准备滑上来 */
+  }
+
+.flip-back .viewmorebtn .text p:first-child {
+    top: 0px;         /* 初始显示在上 */
+  }
+.flip-back .viewmorebtn  .text p:last-child {
+    top: 20px;      /* 初始在下方准备滑上来 */
+  }
+
+
+
+
+  /* header-buttons */
+  /* btn整体 */
+  /* btn整体边框内余白,背景颜色，边框颜色 */
+    /* ✅可改 */
+
+    /* ⛔不可改 */
+    .header-button-innter {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      overflow: hidden;
+      cursor: pointer;
+      font-family: sans-serif;
+    }
+
+
+/* 内里三元素 */
+  /* 内里三元素内余白，间隔，btn整体高度 */
+    /* ✅可改 */
+
+    /* ⛔不可改 */
+    .header-button-front {
+      display: flex;
+      align-items: center;
+      position: relative;
+      /* z-index: 2; */
+    }
+
+
+/* 箭头球们 */
+  .header-yajirusi-front, .header-yajirusi-hover {
+    display: flex;
+  }
+  /* 原始球 */
+    /* 球背景，大小，初始位置 */
+    /* ✅可改 */
+
+
+  /* hover球 */
+    /* 大小，位置，背景 */
+    /* ✅可改 */
+
+    /* ⛔不可改 */
+    .header-yajirusi-hover {
+      position: absolute;
+      border-radius: 50px;
+      z-index: 2;
+    }
+    /* 箭头球内图像 */
+    /* ✅可改 */
+
+
+
+
+/* 文本滑动区域 */
+  /* 文字box，高度，宽度 决定整体宽度*/
+      /* ✅可改 */
+
+  .header-text {
+    overflow: hidden;
+    position: relative;
+  }
+  /* 文字位置 */
+  .header-text p {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* 文字初始位置，颜色 */
+  /* ✅可改 */
+
+  .header-text p:first-child {
+    top: 0px;         /* 初始显示在上 */
+  }
+  /* ✅可改 */
+
+  .header-text p:last-child {
+    top: 20px;      /* 初始在下方准备滑上来 */
+  }
+
+
+
+
+
+
+
+
+
+  
+
+    /* nav-buttons */
+  /* btn整体 */
+  /* btn整体边框内余白,背景颜色，边框颜色 */
+    /* ✅可改 */
+
+    /* ⛔不可改 */
+    .nav-button-innter {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      overflow: hidden;
+      cursor: pointer;
+      font-family: sans-serif;
+    }
+
+
+/* 内里三元素 */
+  /* 内里三元素内余白，间隔，btn整体高度 */
+    /* ✅可改 */
+
+    /* ⛔不可改 */
+    .nav-button-front {
+      display: flex;
+      align-items: center;
+      position: relative;
+      /* z-index: 2; */
+    }
+
+
+/* 箭头球们 */
+  .nav-yajirusi-front, .nav-yajirusi-hover {
+    display: flex;
+  }
+  /* 原始球 */
+    /* 球背景，大小，初始位置 */
+    /* ✅可改 */
+
+
+  /* hover球 */
+    /* 大小，位置，背景 */
+    /* ✅可改 */
+
+    /* ⛔不可改 */
+    .nav-yajirusi-hover {
+      position: absolute;
+      border-radius: 50px;
+      z-index: 2;
+    }
+    /* 箭头球内图像 */
+    /* ✅可改 */
+
+
+
+
+/* 文本滑动区域 */
+  /* 文字box，高度，宽度 决定整体宽度*/
+      /* ✅可改 */
+
+  .nav-text {
+    overflow: hidden;
+    position: relative;
+  }
+  /* 文字位置 */
+  .nav-text p {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* 文字初始位置，颜色 */
+  /* ✅可改 */
+
+  .nav-text p:first-child {
+    top: 0px;         /* 初始显示在上 */
+  }
+  /* ✅可改 */
+
+  .nav-text p:last-child {
+    top: 20px;      /* 初始在下方准备滑上来 */
+  }

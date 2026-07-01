@@ -1,0 +1,1588 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body p,h2,h3,a{
+  font-family: "Hachi Maru Pop", cursive;
+  line-height: 1.2;
+}
+
+.flex{
+  display: flex;
+}
+/* header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding:20px;
+    position: fixed;
+    z-index: 9999;
+    /* background-color: #ffe1e8; */
+  }
+  /* schoolname */
+  #schoolname{
+    flex-direction: column;
+    width: 150px;
+
+  }
+  #sankoname{
+    width: 100px;
+  }
+  #tkilname{
+    width: 300px;
+  }
+
+
+/* menu */
+  .menu{
+    position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+  }
+  #menubest{
+    width: 50px;
+    /* position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%); */
+  }
+  #menufount{
+    /* display: none; */
+    opacity: 1;
+    width: 50px;
+    position: absolute;
+      top: 0px;
+      left: 50%;
+    transform: translateX(-50%);
+  }
+  #menuhover{
+    /* display: none; */
+    opacity: 0;
+    width: 50px;
+    position: absolute;
+      top: 0px;
+      left: 50%;
+    transform: translateX(-50%);
+  }
+  #menunavhover{
+    opacity: 0;
+    width: 50px;
+    position: absolute;
+      top: 0px;
+      left: 50%;
+    transform: translateX(-50%);
+  }
+  #menuhand{
+    position: absolute;
+      bottom: 5px;
+      right: 50px;
+    width: 15px;
+    opacity: 0;
+    z-index: -1;
+  }
+
+
+  .starts{
+    opacity: 0;
+    pointer-events: none;
+    position:absolute;
+    top: 0;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translateX(-50%);
+  }
+  .starts .s1{
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    width: 10px;
+  }
+  .starts .s2{
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    width: 8px;
+  }
+  .starts .s3{
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    width: 6px;
+  }
+
+  .menu p{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffe1e8;
+    font-size: 10px;
+  }
+
+
+
+
+/* nav 外*/
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    /* background-color: #FFE1E8; */
+    border-radius: 0 0 0px 0px;
+    z-index: 200;
+    padding: 20px 60px 60px 60px;
+
+    display: grid;
+    grid-template-columns: 1fr 25rem 25rem;
+    grid-template-rows: auto auto 3fr 1fr;
+    grid-template-areas: 
+    "logo logo logo"
+    "nga req req"
+    "nga visitor contact"
+    "nga sns sub";
+    
+    gap: 0 1.5rem;
+    background-color: #f2668b;
+  }
+  /* .overlay {
+    position: fixed;
+    inset: 0;
+    background: #ffd8e1;
+    filter: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.5s;
+    z-index: 1;
+  }
+
+  .overlay.is-open {
+    opacity: 0.1;
+    pointer-events: auto;
+  } */
+/* nav 外*/
+/* nav内 */
+  .logo-nav{
+    grid-area: logo;
+    width: 100px;
+    height: auto;
+    margin: 0px auto 20px auto;
+  }
+  .logo-nav img{
+    display: block;
+    width: 100%;
+  }
+
+  .navigation{
+    grid-area: nga;
+    margin-right: 10px;
+  }
+  .navigation ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+  }
+  .navigation ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+    border-top: 1px solid #ffe1e8;
+    /* border-radius: 2rem; */
+  }
+  .navigation ul li:last-child{
+    border-bottom: 1px solid #ffe1e8;
+  }
+  .navigation ul li .material-symbols-outlined {
+    color: #ffffff;
+    font-size: 35px;
+      --fill: 0;
+      --wght: 300;
+    font-variation-settings:
+    'FILL' var(--fill),
+    'wght' var(--wght),
+    'GRAD' 0,
+    'opsz' 10
+  }
+  .navigation ul li .borderbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 0 10px;
+    background:#f2668b;
+  }
+
+  .navigation ul li a{
+  
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .requests{
+    grid-area: req;
+  }
+  .requests ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .requests .opencampus .nav-button-innter,
+  .requests .data .nav-button-innter{
+    border-radius: 1rem;
+  }
+  .requests .opencampus .nav-button-front,
+  .requests .data .nav-button-front{
+    height: 100px;
+  }
+  .requests .opencampus .nav-text,
+  .requests .data .nav-text{
+    width: 210px;
+  }
+/* buttons*/
+  #nav-button-box{
+    gap: 10px;
+    justify-content: space-between;
+  }
+  /* ---------opencampus---------- */
+    /* btn整体边框内余白,背景颜色，边框颜色 */
+      /* ✅可改 */
+      .opencampus .nav-button-innter {
+        background: #ed7c9b;
+        padding: 0px 10px;
+      }
+      /* 内里三元素 */
+    /* 内里三元素内余白，间隔，btn整体高度 */
+      /* ✅可改 */
+      .opencampus .nav-button-front {
+        padding-left: 5px;
+        gap: 2px;
+        height: 40px;
+        
+      }
+        /* 原始球 */
+      /* 球背景，大小，初始位置 */
+      /* ✅可改 */
+      .opencampus .nav-yajirusi-front{
+        background-color: #ed7c9b;
+        padding: 3px;
+        transform: translateX(0);
+        border-radius: 50px;
+      }
+
+    /* hover球 */
+      /* 大小，位置，背景 */
+      /* ✅可改 */
+      .opencampus .nav-yajirusi-hover {
+        padding: 6px;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #ffffff;
+      }
+          /* 箭头球内图像 */
+      /* ✅可改 */
+      .opencampus .nav-yajirusi-front img{
+        width: 19px;
+      }
+      .opencampus .nav-yajirusi-hover img{
+        width: 19px;
+      }
+      .nav-yajirusi-front .material-symbols-outlined{
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 24;
+        vertical-align: middle;
+        color: #ffffff;
+      }
+      .nav-yajirusi-hover .material-symbols-outlined{
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 600,
+        'GRAD' 0,
+        'opsz' 24;
+        font-size: 15px;
+        vertical-align: middle;
+        color: #ed7c9b;
+      }
+
+      /* 文本滑动区域 */
+    /* 文字box，高度，宽度 决定整体宽度*/
+        /* ✅可改 */
+      .nav-text {
+      height: 19px;
+      width: 150px; 
+    }
+     .nav-text p {
+      font-size: 15px;
+      font-weight: 700;
+    }
+      /* 文字初始位置，颜色 */
+    /* ✅可改 */
+    .opencampus .nav-text p:first-child {
+      color: #ffffff;
+    }
+      /* ✅可改 */
+    .opencampus .nav-text p:last-child {
+      color: #ffffff;
+    }
+
+
+ /* ---------data---------- */
+    /* btn整体边框内余白,背景颜色，边框颜色 */
+      /* ✅可改 */
+      .data .nav-button-innter {
+        background: #ed7c9b;
+
+        padding: 0px 10px;
+      }
+      /* 内里三元素 */
+    /* 内里三元素内余白，间隔，btn整体高度 */
+      /* ✅可改 */
+      .data .nav-button-front {
+        padding-left: 5px;
+        gap: 2px;
+        height: 40px;
+        
+      }
+        /* 原始球 */
+      /* 球背景，大小，初始位置 */
+      /* ✅可改 */
+      .data .nav-yajirusi-front{
+        background-color: #ed7c9b;
+        padding: 3px;
+        transform: translateX(0);
+        border-radius: 50px;
+      }
+
+    /* hover球 */
+      /* 大小，位置，背景 */
+      /* ✅可改 */
+      .data .nav-yajirusi-hover {
+        padding: 6px;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #ffffff;
+      }
+          /* 箭头球内图像 */
+      /* ✅可改 */
+      .data .nav-yajirusi-front img{
+        width: 19px;
+      }
+      .data .nav-yajirusi-hover img{
+        width: 19px;
+      }
+      /* 文本滑动区域 */
+    /* 文字box，高度，宽度 决定整体宽度*/
+       .data .nav-text {
+      height: 19px;
+      width: 80px; 
+    }
+      /* 文字初始位置，颜色 */
+    /* ✅可改 */
+    .data .nav-text p:first-child {
+      color: #ffffff;
+    }
+      /* ✅可改 */
+    .data .nav-text p:last-child {
+      color: #ffffff;
+    }
+  .visitor{
+    grid-area: visitor;
+    margin-top: 2rem;
+  }
+  .visitor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ffe1e8;
+    border-radius: 1rem;
+  }
+  
+  .visitor p,.visitor a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .visitor p{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .visitor ul{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 1fr 1fr 0.7fr;
+    height: 80%;
+    border-top: 1px solid #ffe1e8;
+    width: 100%;
+  }
+  .visitor ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#f2668b;
+  }
+  .visitor ul li:nth-child(1){
+    grid-column: 1/7;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #ffe1e8;
+    border-bottom: 1px solid #ffe1e8;
+  }
+  .visitor ul li:nth-child(2){
+    grid-column: 7/13;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #ffe1e8;
+  }
+  .visitor ul li:nth-child(3){
+    grid-column: 1/7;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #ffe1e8;
+    border-bottom: 1px solid #ffe1e8;
+  }
+  .visitor ul li:nth-child(4){
+    grid-column: 7/13;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #ffe1e8;
+  }
+  .visitor ul li:nth-child(5){
+    grid-column: 1/13;
+    text-align: center; 
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 1rem 1rem  ;
+  }
+  /* .visitor ul li a {
+    display: block;
+    justify-content: center;
+    line-height: 5;
+    width: 100%;
+    height: 100%;
+  } */
+  .contact{
+    grid-area: contact;
+    margin-top: 2rem;
+  }
+  .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: #ffffff;
+  }
+  .SNSnav{
+    grid-area: sns;
+    margin-top: 50px;
+  }
+  .SNSnav ul{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+  .SNSnav ul li a img {
+    width: 40px;
+  }
+  .SUBnav{
+    grid-area: sub;
+    margin-top: 70px;
+  }
+  .SUBnav{
+    display: flex;
+    gap: 20px;
+  }
+  .SUBnav a{
+    color: #ffffff;
+    line-height: 0.9;
+  }
+
+/* nav内 */
+
+
+
+
+/* buttons*/
+  #header-button-box{
+    gap: 10px;
+    justify-content: space-between;
+  }
+  /* ---------opencampus---------- */
+    /* btn整体边框内余白,背景颜色，边框颜色 */
+      /* ✅可改 */
+      .opencampus .header-button-innter {
+        background: #ed7c9b;
+        padding: 0px 10px;
+      }
+      /* 内里三元素 */
+    /* 内里三元素内余白，间隔，btn整体高度 */
+      /* ✅可改 */
+      .opencampus .header-button-front {
+        padding-left: 5px;
+        gap: 2px;
+        height: 40px;
+        
+      }
+        /* 原始球 */
+      /* 球背景，大小，初始位置 */
+      /* ✅可改 */
+      .opencampus .header-yajirusi-front{
+        background-color: #ed7c9b;
+        padding: 3px;
+        transform: translateX(0);
+        border-radius: 50px;
+      }
+
+    /* hover球 */
+      /* 大小，位置，背景 */
+      /* ✅可改 */
+      .opencampus .header-yajirusi-hover {
+        padding: 6px;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #ffffff;
+      }
+          /* 箭头球内图像 */
+      /* ✅可改 */
+      .opencampus .header-yajirusi-front img{
+        width: 19px;
+      }
+      .opencampus .header-yajirusi-hover img{
+        width: 19px;
+      }
+      .header-yajirusi-front .material-symbols-outlined{
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 24;
+        vertical-align: middle;
+        color: #ffffff;
+      }
+      .header-yajirusi-hover .material-symbols-outlined{
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 600,
+        'GRAD' 0,
+        'opsz' 24;
+        font-size: 15px;
+        vertical-align: middle;
+        color: #ed7c9b;
+      }
+
+      /* 文本滑动区域 */
+    /* 文字box，高度，宽度 决定整体宽度*/
+        /* ✅可改 */
+      .header-text {
+      height: 19px;
+      width: 150px; 
+    }
+     .header-text p {
+      font-size: 15px;
+      font-weight: 700;
+    }
+      /* 文字初始位置，颜色 */
+    /* ✅可改 */
+    .opencampus .header-text p:first-child {
+      color: #ffffff;
+    }
+      /* ✅可改 */
+    .opencampus .header-text p:last-child {
+      color: #ffffff;
+    }
+
+
+ /* ---------data---------- */
+    /* btn整体边框内余白,背景颜色，边框颜色 */
+      /* ✅可改 */
+      .data .header-button-innter {
+        background: #ed7c9b;
+
+        padding: 0px 10px;
+      }
+      /* 内里三元素 */
+    /* 内里三元素内余白，间隔，btn整体高度 */
+      /* ✅可改 */
+      .data .header-button-front {
+        padding-left: 5px;
+        gap: 2px;
+        height: 40px;
+        
+      }
+        /* 原始球 */
+      /* 球背景，大小，初始位置 */
+      /* ✅可改 */
+      .data .header-yajirusi-front{
+        background-color: #ed7c9b;
+        padding: 3px;
+        transform: translateX(0);
+        border-radius: 50px;
+      }
+
+    /* hover球 */
+      /* 大小，位置，背景 */
+      /* ✅可改 */
+      .data .header-yajirusi-hover {
+        padding: 6px;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #ffffff;
+      }
+          /* 箭头球内图像 */
+      /* ✅可改 */
+      .data .header-yajirusi-front img{
+        width: 19px;
+      }
+      .data .header-yajirusi-hover img{
+        width: 19px;
+      }
+      /* 文本滑动区域 */
+    /* 文字box，高度，宽度 决定整体宽度*/
+       .data .header-text {
+      height: 19px;
+      width: 80px; 
+    }
+      /* 文字初始位置，颜色 */
+    /* ✅可改 */
+    .data .header-text p:first-child {
+      color: #ffffff;
+    }
+      /* ✅可改 */
+    .data .header-text p:last-child {
+      color: #ffffff;
+    }
+
+
+
+
+/* first-main */
+    .first-main{
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background-color: #ffe1e8;
+      /* background-color: #ffffff; */
+      z-index: 100;
+    }
+    .frame {
+      position: relative;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      height: 700px;       /* 可随便缩放，边框会等比变化 */
+      aspect-ratio: 1/1;  /* 如果你的边框是正方形，否则填成边框原本比例 */
+      
+      mask-image: url('../images/logos/logomask.svg');  /* 你的不规则边框PNG */
+      mask-size: contain;   
+      mask-repeat: no-repeat;
+      mask-position: center;
+
+      -webkit-mask-image: url('../images/logos/logomask.svg'); /* Safari */
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+
+      overflow: hidden;  /* 确保内部不会露出 */
+    }
+
+      .frame video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;      
+        object-position: 50% 25%; 
+    }
+
+    .lgmsins{
+      position: absolute;
+        top: 0px;
+        left: 0px;
+      width: 700px;
+      opacity: 0.7;
+      
+    }
+
+  /* opennewscircle */
+    .opennewscircle{
+      position: fixed;
+      top: 140px;
+      right: 60px;
+
+      width: 200px;
+      height: 200px;
+      z-index: 10;
+    }
+    
+    .opennewscircle .circlemero{
+      position: absolute;
+      bottom: 165px;
+      left: 85px;
+      width: 100px;
+      transform: rotate(30deg);
+    }
+    .opennewscircle .content{
+      position: absolute;
+        top: 0;
+        left: 0;
+
+      background-color: #ed7c9b;
+      border-radius: 50%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 180px;
+      height: 180px;
+
+      color: #ffffff;
+    }
+    .opennewscircle .content h3{
+      font-weight: 900;
+      font-size: 17px;
+    }
+    .opennewscircle .content .hituke{
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .opennewscircle .content .hituke p{
+      transform: scaleY(1.1);
+      font-weight: 900;
+      font-size: 30px;
+    }
+    .opennewscircle .content .hituke .nannyoubi{
+      display: block;
+      font-size: 20px;
+      margin: 5px 0px;
+      padding: 5px 6px;
+
+      border-radius: 50px;
+      background-color: #ffc3c3;
+    } 
+   
+    .opennewscircle .content .opbutton{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap:5px;
+      width: 90px;
+      height: 30px;
+      border: #ffffff 2px solid;
+      padding: 2px 15px 7px 15px;
+      border-radius: 50px;
+    }
+    .opennewscircle .content:hover .opbutton{
+      background-color: #ffffff;
+      color: #ed7c9b;
+    }
+    .opbutton{
+      transition: all 0.2s;
+    }
+    .opbutton p{
+      width: auto;
+    }
+    .opbutton .material-symbols-outlined{
+      font-size: 17px;
+      margin: 7px 0 0 0;
+    }
+
+
+    .opennewscircle  .circletext img{
+      position: absolute; 
+      bottom: -41px;
+      left: -47px;
+      width: 280px;
+      z-index: -1;
+    }
+
+
+
+  /* fftextbox */
+    .fftextbox{
+      font-weight: 400;
+      font-style: normal;
+      color: #ed7c9b;
+    }
+    .fftextbox{
+      display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+      width: 100%;
+      padding: 0 25px;
+    }
+    .ffleftbox{
+      position: fixed;  
+      bottom: 30px;
+      left: 0;
+      width: 350px;
+    }
+    .ffrightbox{
+      position: fixed;
+      bottom: 30px;
+      right: 0;
+      width: 300px;
+    }
+    .fftextbox h2{
+      font-size: 120px;
+      transform: scaleY(1.2);
+    }
+    .fftextbox p{
+      padding-top: 30px;
+      font-size: 50px;
+    }
+
+
+
+/*滚动文字*/
+  .Horizontal {
+  /* background-image: url(../images/reviews/屏幕截图\ 2026-01-21\ 000757.png); */
+  background-color: #ffe1e8;
+  overflow: hidden;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.Horizontalline {
+  position: absolute;
+  width: max-content;/*内容多宽，这个元素就多宽 */
+  white-space: nowrap;/* 不允许换行，强制一整条横向排列 */
+  display: flex;
+  gap: 2vw;
+  padding-left: 100vw;/*让文字一开始在屏幕右侧外面*/
+  font-weight: 600;
+  line-height: 1.1;
+  color: #f2668b;
+
+}
+
+
+.Horizontalline:nth-child(1) {  
+  top: 10%;
+  left: 0;
+  font-size: clamp(1rem, 3vw, 6rem);
+}
+.Horizontalline:nth-child(2) { 
+  top: 20%;
+  left: 0; 
+  font-size: clamp(1rem, 2vw, 6rem);
+}
+.Horizontalline:nth-child(3) { 
+  top: 30%;
+  left: 0; 
+  font-size: clamp(1rem, 4vw, 6rem);
+}
+.Horizontalline:nth-child(4) { 
+  top: 45%;
+  left: 0; 
+  font-size: clamp(1rem, 2vw, 6rem);
+}
+.Horizontalline:nth-child(5) { 
+  top: 60%;
+  left: 0; 
+  font-size: clamp(1rem, 5vw, 6rem);
+}
+.Horizontalline:nth-child(6) { 
+  top: 80%;
+  left: 0; 
+  font-size: clamp(3rem, 2vw, 6rem);
+}
+
+
+
+
+/* maplujing */
+
+.maplujing {
+  position: relative;
+  height: 100vh;      /* 给滚动空间 */
+  padding-bottom: 100vh;
+}
+
+.map-stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.map-stage svg {
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+}
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+      .cls-1 {
+        stroke: #e80819;
+      }
+      .cls-2 {
+        stroke: #ff5716;
+      }
+
+      .cls-3 {
+        stroke: #00bb86;
+      }
+
+      .cls-4 {
+        stroke: #d8006d;
+      }
+
+
+      .zhanwei{
+        height: 1000px;
+      }
+
+  .mapbeforground {
+    position: absolute;
+    inset: 0;/*等价于 上下左右：0*/
+    width: 100%;
+    background-color: #ffffff;
+    opacity: 0;
+    z-index: 100;
+  }
+
+
+
+/* school-scene */
+  /* school-scene */
+.school{
+  position: relative;
+  bottom: 20vh;
+  width: 100%;
+  padding-top: 0vh;
+  /* background-color: #ffffff; */
+  /* 先允许交互 */
+  pointer-events: auto;
+}
+
+
+.scene {
+  width: 100%;
+  position: relative;
+}
+.about-me{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform:translateX(-50%);
+  width: 100%;
+  height: 1000px;
+  z-index: 20;
+  pointer-events: none;
+}
+.about-me p{
+  position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  width: 200px;
+  font-size: 20px;
+  color: #d8006d;
+}
+.dharts{
+  position: absolute;
+    top: 58%;
+    left: 50%;
+  transform: translate(-50%,-50%);
+  width: 900px;
+}
+
+.jingdian1{
+  position: absolute;
+  top: 70%;
+  left: 65%;
+  transform: translate(-50%,-50%);
+  width: 200px;
+}
+.jingdian2{
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  transform: translate(-50%,-50%);
+  width: 200px;
+}
+.school-grid {
+  display: grid;
+  grid-template-columns: repeat(32, 1fr);
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ 
+.cards {
+  grid-column: var(--column);
+  grid-row: var(--row);
+  height: var(--item_h); 
+}
+
+/* ---------- 各卡片位置 ---------- */
+
+.card-1 {
+  --column: 5 / 15;
+  --row: 1;
+  --item_h: max(28rem, calc(100vw / (1300 / 400)));
+}
+
+.card-2 {
+  --column: 15 / 28;
+  --row: 1;
+  --item_h: max(24rem, calc(100vw / (1300 / 270)));
+}
+
+.card-3 {
+  --column: 2 / 12;
+  --row: 1;
+  --item_h: max(20rem, calc(100vw / (1300 / 246)));
+  margin-top: 32rem;
+}
+
+.card-4 {
+  --column: 22 / 32;
+  --row: 1;
+  --item_h: max(16rem, calc(100vw / (1300 / 160)));
+  margin-top: 26rem;
+}
+
+.card-5 {
+  --column: 9 / 20;
+  --row: 1;
+  --item_h: max(16rem, calc(100vw / (1300 / 160)));
+  margin-top: 54rem;
+}
+
+.card-6 {
+  --column: 20 / 29;
+  --row: 1;
+  --item_h: max(24rem, calc(100vw / (1300 / 160)));
+  margin-top:44rem;
+}
+/* ---------- 各卡片位置 ---------- */
+
+.flip-card {
+  height: var(--item_h);
+  width: 100%;
+  perspective: 1200px;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transform-origin: center;
+  opacity: 0;
+}
+.flip-front, .flip-back {
+  position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 30px;
+  backface-visibility: hidden;
+  font-family: "Hachi Maru Pop", cursive;
+}
+.flip-front { 
+  background: #ffe1e8; 
+  color: #ED7C9B;
+
+}
+.flip-front h3{
+  font-size: 50px;
+}
+/* .card-1 .flip-front{
+
+}
+.card-2 .flip-front{
+
+}
+.card-3 .flip-front{
+
+}
+.card-4 .flip-front{
+
+}
+.card-5 .flip-front{
+
+}
+.card-6 .flip-front{
+
+} */
+.shuzi,
+.counter{
+  color:#F2668B;
+  font-size: 50px;
+  font-family: "Hachi Maru Pop", cursive;
+  font-weight: bolder;
+  transform: scaleY(1.2);
+}
+.flip-back { 
+  background-color: #ed7c9b;
+  color: #ffffff;
+}
+.cards[data-rotate="y"] .flip-back {
+  transform: rotateY(180deg);
+}
+
+.cards[data-rotate="x"] .flip-back {
+  transform: rotateX(180deg);
+}
+
+.flip-card {
+  pointer-events: auto;
+   /* 外层仍然要能接收初始 hover */
+}
+.flip-inner {
+  pointer-events: none;
+  opacity: 0; /* 内层动画时不抢事件 */
+}
+.flip-back {
+  pointer-events: none; /* 翻过去后，背面可以接收事件 */
+}
+
+/* 流动文字背景 */
+.flowing-text {
+  position: absolute;
+  top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.3);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.flowing-text.left {
+  left: 10%;
+}
+
+.flowing-text.right {
+  right: 10%;
+}
+
+
+/* ---------View More---------- */
+   .viewmorebtn{
+    position: absolute;
+      top: 71%;
+      left: 51%;
+      transform: translate(-50%,-50%);
+    width: 200px;
+    pointer-events: auto;
+    z-index: 200;
+  }
+    /* btn整体边框内余白,背景颜色，边框颜色 */
+      /* ✅可改 */
+       .viewmorebtn .button-innter {
+        background: #ffffff;
+        padding: 0px 10px;
+        border:1px solid #ED7C9B;
+      }
+      /* 内里三元素 */
+    /* 内里三元素内余白，间隔，btn整体高度 */
+      /* ✅可改 */
+       .viewmorebtn  .button-front {
+        gap: 2px;
+        height: 55px;
+        
+      }
+        /* 原始球 */
+      /* 球背景，大小，初始位置 */
+      /* ✅可改 */
+       .viewmorebtn  .yajirusi-front{
+        background-color: #ed7c9b;
+        padding: 3px;
+        transform: translateX(0);
+        border-radius: 50px;
+      }
+
+    /* hover球 */
+      /* 大小，位置，背景 */
+      /* ✅可改 */
+       .viewmorebtn  .yajirusi-hover {
+        padding: 6px;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #ffffff;
+      }
+          /* 箭头球内图像 */
+      /* ✅可改 */
+       .viewmorebtn  .yajirusi-front img{
+        width: 19px;
+      }
+       .viewmorebtn  .yajirusi-hover img{
+        width: 19px;
+      }
+      .yajirusi-front .material-symbols-outlined{
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 24;
+        vertical-align: middle;
+        color: #ffffff;
+      }
+      .yajirusi-hover .material-symbols-outlined{
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 600,
+        'GRAD' 0,
+        'opsz' 24;
+        font-size: 15px;
+        vertical-align: middle;
+        color: #ed7c9b;
+      }
+
+      /* 文本滑动区域 */
+    /* 文字box，高度，宽度 决定整体宽度*/
+        /* ✅可改 */
+       .viewmorebtn .text {
+      height: 20px;
+      width: 120px; 
+    }
+      .viewmorebtn .text p {
+      font-size: 15px;
+      font-weight: 700;
+    }
+      /* 文字初始位置，颜色 */
+    /* ✅可改 */
+     .viewmorebtn  .text p:first-child {
+      color:#ED7C9B;
+    }
+      /* ✅可改 */
+     .viewmorebtn  .text p:last-child {
+      color:#ffffff;
+    }
+    
+
+
+/* gakkasyoukai */
+/* 背景 */
+ .bg-marquee{
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none; /* 不挡点击 */
+  z-index: 0;
+}
+
+.marquee-track{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  gap: 80px;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+
+.marquee-track span{
+  font-size: 240px;
+  font-weight: 800;
+  white-space: nowrap;
+  color: #ffffff;
+}
+/* 正文 */
+  .gakkasyoukai .content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: 1;
+  }
+  .gakkasyoukai{
+    position: relative;
+    margin-top: 20vh;
+    height: 172vh;
+    width: 100%;
+    padding: 8rem;
+    background-color: #ed7c9b;
+    border-radius: 30vh;
+
+    display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      align-items: center;
+  }
+  .gakkateima{
+    height: 16%;
+    display: flex;
+      flex-direction: column;
+      justify-content:baseline;
+      align-items: center;
+
+
+  }
+  .gakkateima h2{
+    font-size: 80px;
+    margin-bottom: 20px;
+  }
+  .gakkateima h3{
+    font-size: 20px;
+  }
+
+
+   .gakkasyoukai ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 26%;
+    left: 10%;
+    z-index: 10;
+  }
+   .gakkasyoukai ul li{
+    list-style: none;
+    display: block;
+    width: 80px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 20px;
+  }
+  .gakkasyoukai ul li img{
+    width: 100% ;
+  }
+  .imagebox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .merodiimages{
+    display: block;
+    width: 500px;
+    /* margin-bottom: 50px; */
+  }
+  .merodiimages img{
+    width: 100%;
+  }
+  .imagebox .name{
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 50px 0;
+  }
+
+  .gakkasyoukai .bottons{
+    width: 800px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 18.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  .gakkasyoukai .bottons .back,
+  .gakkasyoukai .bottons .next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffc3c3;
+    color: #ffffff;
+    width: 125px;
+    height: 50px;
+    border-radius:25px ;
+  }
+
+
+
+  /* --- 轮播组件容器 --- */
+    .secopencampus::before{
+      content:"  ";
+      position: absolute;
+      top: -250px;
+      left: 0;
+      width: 100%;
+      height: 150vh;
+      background-color: #FFF096;
+      z-index: -1;
+    }
+    .secopencampus{
+      background-color: #FFF096;
+      position: relative;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .memory-carousel {
+      width: 100%;
+      max-width: 1200px; /* 限制最大宽度 */
+      overflow: hidden; /* 隐藏超出部分 */
+      position: relative;
+      padding: 40px 0;
+      text-align: center;
+  }
+
+  .title {
+      margin-bottom: 30px;
+      font-size: 50px;
+      color: #333;
+  }
+
+  .title span {
+      display: block;
+      font-size: 14px;
+      color: #888;
+      margin-top: 5px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+  }
+
+  /* --- 轨道与卡片 --- */
+  .carousel {
+      position: relative;
+      margin-top: 50px;
+      height: 500px; /* 根据图片高度调整 */
+      display: flex;
+      align-items: center;
+  }
+
+  .track {
+      display: flex;
+      list-style: none;
+      /* 关键：绝对定位以便计算偏移量 */
+      position: absolute; 
+      left: 50%; /* 从中心开始计算 */
+      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+      will-change: transform;
+  }
+
+  .track .card {
+      /* 这里的宽度必须和 JS 中的 cardWidth 对应 */
+      width: 260px; 
+      height: 350px;
+      flex-shrink: 0;
+      margin: 0 30px; /* 左右各30px = 60px 间距 */
+      border-radius: 15px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: all 0.5s ease;
+      opacity: 0.5; /* 默认半透明 */
+      transform: scale(0.85); /* 默认缩小 */
+  }
+
+  .track .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* 保证图片填满不拉伸 */
+      display: block;
+  }
+
+  /* --- 动态类名样式 (由JS控制) --- */
+  .track .card.active {
+      opacity: 1;
+      transform: scale(1.1); /* 激活状态放大 */
+      z-index: 10;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  }
+
+  .track .card.prev, .card.next {
+      opacity: 0.8;
+      transform: scale(0.95);
+      z-index: 5;
+  }
+
+  /* --- 导航按钮 --- */
+  .carousel .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #fff;
+      border: none;
+      cursor: pointer;
+      z-index: 100;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+      transition: background 0.3s;
+  }
+
+  .carousel .nav:hover {
+      background: #eee;
+  }
+
+  .prev { left: 20px; }
+  .next { right: 20px; }
+
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+      .card {
+          width: 200px; /* 移动端可以稍微改小，但需要同步修改JS配置 */
+          height: 280px;
+      }
+  }
+
+  .secopencampus .viewmorebtn{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
