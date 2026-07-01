@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- ----------CSS------------ -->
+      <!-- reset -->
+      <link rel="stylesheet" href="css/reset.css">
+      <!-- button导入 -->
+      <link rel="stylesheet" href="css/button.css">
+      <!-- 基础style -->
+      <link rel="stylesheet" href="css/style.css">
+
+
+
+
+
+  <!-- ----------字体链接导入------------ -->
+    <!-- ----------icon链接导入------------ -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
+    
+    <!-- ----------字体链接导入------------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    
+
+
+
+  <!-- ----------工具链接导入------------ -->
+      <!-- gasp -->
+        <!-- gasp导入 -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <!-- 滚动监听导入 -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <!-- svg描边导入 -->
+        <script src="https://assets.codepen.io/16327/DrawSVGPlugin3.min.js"></script>
+        <!-- 分割文字导入 -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+
+</head>
+
+
+
+<body>
+  <header>
+    <div id="schoolname" class="flex">
+      <img id="sankoname" src="images/logos/sanko-logo.svg" alt="三幸学園">
+      <img id="tkilname" src="images/logos/schoolname.svg" alt="東京医療秘書歯科衛生&IT専門学校">
+    </div>
+
+    <div class="menu">
+      <img id="menubest" src="images/merodis/menubest.png" alt="メニュー">
+      <img id="menuhover" src="images/merodis/menuhover.png" alt="メニュー">
+      <img id="menufount" src="images/merodis/menufount.png" alt="メニュー">
+      <img id="menunavhover" src="images/merodis/menunavHover.png" alt="メニュー">
+      <img id="menuhand" src="images/merodis/hand.png" alt="メニュー">
+      <div class="starts">
+        <img class="s1" src="images/merodis/start.svg" alt="start">
+        <img class="s2" src="images/merodis/start.svg" alt="start">
+        <img class="s3" src="images/merodis/start.svg" alt="start">
+      </div>
+      <p>menu</p>
+    </div>
+<!-- -----------------nav--------------------- -->
+<!-- -----------------nav--------------------- -->
+<!-- -----------------nav--------------------- -->
+    <nav>
+      <div class="logo-nav">
+        <img src="images/logos/logo.svg" alt="三幸学園ロゴ">
+      </div>
+      <div class="navigation">
+        <ul>
+          <li><div class="borderbox"><a href="#home">ホーム</a><span class="material-symbols-outlined">arrow_circle_right</span></div></li>
+          <li><div class="borderbox"><a href="#jiuzhi">就職実績</a><span class="material-symbols-outlined">arrow_circle_right</span></div></li>
+          <li><div class="borderbox"><a href="#xueke">学科紹介</a><span class="material-symbols-outlined">arrow_circle_right</span></div></li>
+          <!-- <li><div class="borderbox"><a href="event.html">イベント</a><span class="material-symbols-outlined">add_circle</span></div></li>  -->
+          <li><div class="borderbox"><a href="https://forms.sanko.ac.jp/c3dcfl/tokyomed/eventselect.php">オープンキャンパス</a><span class="material-symbols-outlined">add_circle</span></div></li>
+          <!-- <li><div class="borderbox"><a href="zuopin.html">学生作品</a><span class="material-symbols-outlined">arrow_circle_right</span></div></li> -->
+        </ul>
+      </div>  
+      <div class="requests">
+        <ul>
+          <li>
+            <div class="opencampus">
+              <div class="nav-button-innter">   <!-- /* btn整体边框内余白,背景颜色，边框颜色 */ -->
+                <div class="nav-button-front"><!-- /* 内里三元素内余白，间隔，btn整体高度 */ -->
+                    <div class="nav-yajirusi-front"><!-- hover球 大小，位置，背景-->
+                      <span class="material-symbols-outlined">
+                        event_available
+                      </span>       
+                    </div>
+                    <div class="nav-text"><!-- 文本滑动区域 ,文字box，高度，宽度 -->
+                      <p>オープンキャンパス</p>
+                      <p>オープンキャンパス</p>
+                    </div>
+                    <div class="nav-yajirusi-hover"><!-- /* 原始球，球背景，大小，初始位置 */ -->
+                      <span class="material-symbols-outlined">
+                      open_in_new
+                      </span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="data">
+              <div class="nav-button-innter">
+                <div class="nav-button-front">
+                  <div class="nav-yajirusi-front">
+                    <span class="material-symbols-outlined">
+                    article
+                    </span>              
+                  </div>
+                  <div class="nav-text">
+                    <p>資料請求</p>
+                    <p>資料請求</p>
+                  </div>
+                  <div class="nav-yajirusi-hover">
+                    <span class="material-symbols-outlined">
+                    arrow_forward
+                    </span>              
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="data">
+              <div class="nav-button-innter">
+                <div class="nav-button-front">
+                  <div class="nav-yajirusi-front">
+                    <span class="material-symbols-outlined">
+                      location_on
+                    </span>              
+                  </div>
+                  <div class="nav-text">
+                    <p>アクセス</p>
+                    <p>アクセス</p>
+                  </div>
+                  <div class="nav-yajirusi-hover">
+                    <span class="material-symbols-outlined">
+                    arrow_forward
+                    </span>              
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="visitor">
+        <p>入学検討者の皆様へ</p>
+        <ul>
+          <li><a href="https://www.sanko.ac.jp/tokyo-med/thinking/opencampus/">高校1･2年生の方</a></li>
+          <li><a href="https://www.sanko.ac.jp/tokyo-med/thinking/tsushinsei/">通信制高校生の方</a></li>
+          <li><a href="https://www.sanko.ac.jp/tokyo-med/thinking/society/">再進学希望の方</a></li>
+          <li><a href="https://www.sanko.ac.jp/tokyo-med/thinking/abroad/">留学生の方</a></li>
+          <li><a href="https://www.sanko.ac.jp/tokyo-med/other/">OB･関係者･企業の皆様へ</a></li>
+        </ul>
+        <!-- <ul>
+          <li><a href="#">卒業生の方</a></li>
+          <li><a href="#">保護者の方</a></li>
+          <li><a href="#">学校関係の方</a></li>
+          <li><a href="#">企業の方</a></li>
+        </ul> -->
+      </div>
+      <div class="contact">
+        <p>お問い合わせ</p> 
+        
+      </div>
+      <div class="SNSnav">
+        <ul>
+          <li><a href="#"><img src="images/button/Instagram.svg" alt="インスタグラム"></a></li>
+          <li><a href="#"><img src="images/button/X.svg" alt="ツイッター"></a></li>
+          <li><a href="#"><img src="images/button/YouTube.svg" alt="ユーチューブ"></a></li>
+          <li><a href="#"><img src="images/button/Line.svg" alt="Line"></a></li>
+          <li><a href="#"><img src="images/button/tiktok.svg" alt="tiktok"></a></li>
+        </ul>
+      </div>
+      <div class="SUBnav">
+        <a href="#">個人情報保護方針</a>
+        <a href="#">情報公開</a>
+      </div>
+    </nav>
+
+<!-- -----------------nav--------------------- -->
+<!-- -----------------nav--------------------- -->
+<!-- -----------------nav--------------------- -->
+
+    <div id="header-button-box" class="flex">
+      <div class="opencampus">
+        <a href="https://forms.sanko.ac.jp/c3dcfl/tokyomed/eventselect.php">
+          <div class="header-button-innter">   <!-- /* btn整体边框内余白,背景颜色，边框颜色 */ -->
+            <div class="header-button-front"><!-- /* 内里三元素内余白，间隔，btn整体高度 */ -->
+                <div class="header-yajirusi-front"><!-- hover球 大小，位置，背景-->
+                  <span class="material-symbols-outlined">
+                    event_available
+                  </span>       
+                </div>
+                <div class="header-text"><!-- 文本滑动区域 ,文字box，高度，宽度 -->
+                  <p>オープンキャンパス</p>
+                  <p>オープンキャンパス</p>
+                </div>
+                <div class="header-yajirusi-hover"><!-- /* 原始球，球背景，大小，初始位置 */ -->
+                  <span class="material-symbols-outlined">
+                  open_in_new
+                  </span>
+                </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="data">
+        <a href="https://forms.sanko.ac.jp/c3dcfl/tokyomed/form.php?fno=1&fsno=1">
+          <div class="header-button-innter">
+              <div class="header-button-front">
+                <div class="header-yajirusi-front">
+                  <span class="material-symbols-outlined">
+                  article
+                  </span>              
+                </div>
+                <div class="header-text">
+                  <p>資料請求</p>
+                  <p>資料請求</p>
+                </div>
+                <div class="header-yajirusi-hover">
+                  <span class="material-symbols-outlined">
+                  arrow_forward
+                  </span>              
+                </div>
+              </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- <div class="overlay" id="overlay"></div> -->
+
+  <section class="first-main" id="home">
+    <div class="frame">
+      <img class="lgmsins" src="images/logos/logomaskins.svg">
+      <video autoplay muted loop playsinline src="images/videos/20260120-1513-01.2484946.mp4"></video>
+    </div>
+
+
+    <div class="opennewscircle">
+      <a href="https://forms.sanko.ac.jp/c3dcfl/tokyomed/eventdetail.php?GP=1760&ET=1&SD=2026-02-03&CTAGP=1760&CTACode=1760_06&RDFlag=1">
+        <img class="circlemero" src="images/merodis/catch_advantage.png" alt="meiledi">
+        <div class="content">
+          <h3>オーペンキャンパス</h3>
+          <div class="hituke">  
+            <p>12.06</p>
+            <div class="nannyoubi">土</div>
+          </div>
+          <div class="opbutton">
+            <p>more</p>
+            <span class="material-symbols-outlined">
+                  open_in_new
+            </span>
+          </div>
+        </div>
+        <div class="circletext"><img src="images/logos/circletext.png" alt="オーキャンではじめの一歩を踏み出そう"></div>
+      </a>
+    </div>
+
+
+    <div class="fftextbox hachi-maru-pop-regular">
+      <div class="ffleftbox">
+        <h2>仕事</h2>
+        <p>ずっと頼られる</p>
+      </div>
+      <div class="ffrightbox">
+        <h2>資格</h2>
+        <p>一生役立つ</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="Horizontal">
+    <div class="container">
+      <h3 class="Horizontalline">
+        今の 目標は 「医療秘書技能検定合格」！ 予習 ・ 復習 も 頑張って います
+      </h3>
+      <h3 class="Horizontalline">
+        イベントの 委員 にも 挑戦して 学生生活 を思い切り 楽しみたい です
+      </h3>
+      <h3 class="Horizontalline">
+        専門知識 や 資格 だけでなく、 人 としての 力もしっかり 育む カリキュラムで、 卒業後 も 社会 で長く 活躍できる 人材 を育て ています。
+      </h3>
+      <h3 class="Horizontalline">
+        将来は 患者さま と向き合える 柔らかな 心を 持った 医療事務 に
+      </h3>
+      <h3 class="Horizontalline">
+        WEB制作に 必要な 知識を 身につけられる 理想的な 環境！
+      </h3>
+      <h3 class="Horizontalline">
+        検定試験 合格を 目指し 家でも しっかり 勉強中
+      </h3>
+    </div>
+  </section>
+
+  <section class="maplujing">
+    <div class="map-stage">
+   <svg id="_レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3640 2160">
+    
+    <g id="_レイヤー_2"><image class="cls-5" width="3640" height="2160" xlink:href="images\reviews\map\MAP.png"/></g>
+    <g id="_レイヤー_1-2">
+      <path class="cls-4" d="M1060.42,276.12l73.9.73c88.14.84,174.39-1.43,261.82-.51,12.86.14,21.6,13.1,16.95,25.09l-53.08,132.78c-.51,1.32-.94,2.68-1.12,4.08-1.14,8.49,5.23,10.58,10.76,12,101.13,25.99,205.39,36.94,309.33,47.26,6.71.67,11.47,6.85,10.41,13.5-3.89,24.37-9.47,43.56-15.66,68.1-1.28,5.09,1.89,10.24,7.01,11.38l15.86-.64"/>
+      <path class="cls-1" d="M986.88,469.45l2.18,1.67,18.36,14.06c6.15,4.71,13.77,7.11,21.51,6.76l13.96-.62c4.43.28,7.88,3.68,7.93,7.8l1.23,103.84c.06,5.36.23,11.04,3.34,15.55,6.69,9.67,22.02,8.54,34.15,6.25,52.05-9.83,104.09-19.66,156.14-29.48,21.27-4.02,42.93-8.06,64.54-6.08,15.75,1.44,30.94,6.03,46.05,10.41,93.15,26.98,188.56,46.75,284.56,62.97,8.46,1.43,18.17,2.55,24.77-2.57,5.26-4.08,6.8-10.89,7.96-17.16,2.23-12.06,4.26-24.16,6.07-36.28.98-6.56,10.18-18.18,16.98-16.67l.4.02"/>
+      <path class="cls-2" d="M1690.27,1795.81l78.39,19.84,16.49,2.89h0c11.95.61,21.09-8.66,20.4-20.6-6.51-112.83,38.37-218.74,75.82-321.17,3.4-9.29.34-19.7-7.57-25.66-109.12-82.25-233.31-177.77-350.25-273.71-8.94-7.34-3.89-22.78,4.5-30.74,7.16-6.8,17.04-13.45,19.87-22.99,5.13-17.28.76-38.33,5.75-55.65,11.02-38.31,25.34-78.32,48.69-114,35.17-53.75,42.52-116.69,50.05-183.18,5.57-49.13,13.72-99.47,26.39-148.92,2-7.82,3.4-17.82,7.02-26.03.87-1.97,1.11-5.36,3.29-5.83l7.49-.17"/>
+      <path class="cls-3" d="M2527.15,364.94l-15.84,194.38c-.3,7.62-12.21,14.13-20.33,13.85-48.31-1.71-95.91-9-145.43-12.42-5.32-.37-9.95,3.43-10.21,8.44-.2,3.82-.53,7.63-.99,11.43-.43,3.54-3.79,6.12-7.58,5.87-97.21-6.46-113.66-18.07-166.53-31.09-3.05-.75-6.2-.16-8.98,1.24-2.71,1.37-7.03.99-10.32.1-35.61-9.63-71.22-19.26-106.82-28.89-6.91-1.87-14.09,1.97-15.92,8.5-4.66,16.63-6.04,36.02-13.75,36.51-16.22,1.03-82.76-20.98-164.57-36.76-6.59-1.27-13.11,2.49-14.9,8.58l-10.26,34.86c-1.91,6.47-9.09,10.22-15.95,8.33l-97.11-26.8c-6.5-1.79-13.37,1.48-15.36,5.67l-3.38,20.51c-.79,4.78,10.58,1.87,13.68,2.65"/></g>
+    <g id="_レイヤー_2-2">
+      <image class="yiliaomishu" width="1000" height="1000" transform="translate(1634.29 521.06) scale(.11)" xlink:href="images\merodis\医療秘書.png"/>
+    </g>
+    </svg>
+      <div class="mapbeforground"></div>
+    </div>
+
+  </section>
+
+  <div class="school">
+    <section class="scene">
+      <div class="about-me">
+        <img class="dharts" src="images/logos/dharts.png" alt="">
+        <p>専門知識や資格だけでなく、人としての<br>
+          力もしっかり育むカリキュラムで、<br>
+          社会で長く活躍できる人材を育てています
+        </p>
+        <div class="viewmorebtn">
+          <a href="https://www.sanko.ac.jp/tokyo-med/schoolguide/">
+            <div class="button-innter">   <!-- /* btn整体边框内余白,背景颜色，边框颜色 */ -->
+              <div class="button-front"><!-- /* 内里三元素内余白，间隔，btn整体高度 */ -->
+                  <div class="yajirusi-front"><!-- hover球 大小，位置，背景-->
+                    <span class="material-symbols-outlined">
+                      arrow_forward
+                    </span>       
+                  </div>
+                  <div class="text"><!-- 文本滑动区域 ,文字box，高度，宽度 -->
+                    <p>View More</p>
+                    <p>View More</p>
+                  </div>
+                  <div class="yajirusi-hover"><!-- /* 原始球，球背景，大小，初始位置 */ -->
+                    <span class="material-symbols-outlined">
+                    arrow_forward
+                    </span>
+                  </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <img class="jingdian1" src="images/merodis/jingdian1.png" alt="">
+        <img class="jingdian2" src="images/merodis/jingdian2.png" alt="">
+      </div>
+      <ul class="school-grid">
+        
+        <li class="cards card-1" data-rotate="x" data-tilt="-7">
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <h3>
+                  就職率
+                </h3>
+                <p>就職サポートと<br>業界からの<br>信頼で高い就職率!</p>
+                <p class="shuzi">
+                  <span class="stat counter"
+                      data-target="100">
+                    0
+                  </span>
+                  %
+                </p>
+              </div>
+              <div class="flip-back">
+                <p>就職サポートと<br>業界からの<br>信頼で高い就職率!</p>
+                <div class="viewmorebtn">
+                  <a href="https://www.sanko.ac.jp/tokyo-med/job_skill-med/jobdata.html">
+                    <div class="button-innter">   <!-- /* btn整体边框内余白,背景颜色，边框颜色 */ -->
+                      <div class="button-front"><!-- /* 内里三元素内余白，间隔，btn整体高度 */ -->
+                        <div class="yajirusi-front"><!-- hover球 大小，位置，背景-->
+                          <span class="material-symbols-outlined">
+                            arrow_forward
+                          </span>       
+                        </div>
+                        <div class="text"><!-- 文本滑动区域 ,文字box，高度，宽度 -->
+                          <p>View More</p>
+                          <p>View More</p>
+                        </div>
+                        <div class="yajirusi-hover"><!-- /* 原始球，球背景，大小，初始位置 */ -->
+                          <span class="material-symbols-outlined">
+                          arrow_forward
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="cards card-2" data-rotate="x" data-tilt="-7">
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <h3>資格取得</h3>
+                <p>資格取得のためのサポートも充実</p>
+                <p class="shuzi">
+                  最大
+                  <span class="stat counter"
+                        data-target="19">
+                      0
+                  </span>
+                  種類
+                </p>
+              </div>
+              <div class="flip-back">
+                <p>資格取得のためのサポートも充実</p>
+                <div class="viewmorebtn">
+                  <a href="https://www.sanko.ac.jp/tokyo-med/job_skill-med/skill.html">
+                    <div class="button-innter">   <!-- /* btn整体边框内余白,背景颜色，边框颜色 */ -->
+                      <div class="button-front"><!-- /* 内里三元素内余白，间隔，btn整体高度 */ -->
+                        <div class="yajirusi-front"><!-- hover球 大小，位置，背景-->
+                          <span class="material-symbols-outlined">
+                            arrow_forward
+                          </span>       
+                        </div>
+                        <div class="text"><!-- 文本滑动区域 ,文字box，高度，宽度 -->
+                          <p>View More</p>
+                          <p>View More</p>
+                        </div>
+                        <div class="yajirusi-hover"><!-- /* 原始球，球背景，大小，初始位置 */ -->
+                          <span class="material-symbols-outlined">
+                          arrow_forward
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="cards card-3" data-rotate="y" data-tilt="-7">
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <h3>
+                  学科数
+                </h3>
+                <p class="shuzi">全7学科
+                  
+                  <span class="stat counter"
+                        data-target="13">
+                      0
+                  </span>
+                  通り
+                </p>
+                <p>入学後に自分に合ったコースを選べる!</p>
+              </div>
+              <div class="flip-back">
+                <p>入学後に自分に合ったコースを選べる!</p>
+                <div class="viewmorebtn">
+                  <a href="https://www.sanko.ac.jp/tokyo-med/field-medical/">
+                    <div class="button-innter">   <!-- /* btn整体边框内余白,背景颜色，边框颜色 */ -->
+                      <div class="button-front"><!-- /* 内里三元素内余白，间隔，btn整体高度 */ -->
+                        <div class="yajirusi-front"><!-- hover球 大小，位置，背景-->
+                          <span class="material-symbols-outlined">
+                            arrow_forward
+                          </span>       
+                        </div>
+                        <div class="text"><!-- 文本滑动区域 ,文字box，高度，宽度 -->
+                          <p>View More</p>
+                          <p>View More</p>
+                        </div>
+                        <div class="yajirusi-hover"><!-- /* 原始球，球背景，大小，初始位置 */ -->
+                          <span class="material-symbols-outlined">
+                          arrow_forward
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="cards card-4" data-rotate="x" data-tilt="7">
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <p>
+                  難関資格も高い合格実績！
+                </p>
+                <p class="shuzi">
+                  診療情報管理士
+                  <span class="stat counter"
+                        data-target="90.9">
+                      0
+                  </span>
+                  %
+                </p>
+              </div>
+              <div class="flip-back">
+                <p>難関資格も高い合格実績！</p>
+                <div class="viewmorebtn">
+                  <a href="https://www.sanko.ac.jp/tokyo-med/job_skill-med/skill_introduction.html">
+                    <div class="button-innter">   <!-- /* btn整体边框内余白,背景颜色，边框颜色 */ -->
+                      <div class="button-front"><!-- /* 内里三元素内余白，间隔，btn整体高度 */ -->
+                        <div class="yajirusi-front"><!-- hover球 大小，位置，背景-->
+                          <span class="material-symbols-outlined">
+                            arrow_forward
+                          </span>       
+                        </div>
+                        <div class="text"><!-- 文本滑动区域 ,文字box，高度，宽度 -->
+                          <p>View More</p>
+                          <p>View More</p>
+                        </div>
+                        <div class="yajirusi-hover"><!-- /* 原始球，球背景，大小，初始位置 */ -->
+                          <span class="material-symbols-outlined">
+                          arrow_forward
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="cards card-5" data-rotate="x" data-tilt="7">
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <h3>
+                  頼れる先生たち
+                </h3>
+                <p class="shuzi">
+                  <span class="stat counter"
+                        data-target="93.6">
+                      0
+                  </span>
+                  %
+                </p>
+                <p>何でも気軽に相談できる先生</p>
+              </div>
+              <div class="flip-back">
+                <p>何でも気軽に相談できる先生</p>
+                <div class="viewmorebtn">
+                  <a href="https://www.sanko.ac.jp/tokyo-med/schoolguide/lecturer.html">
+                    <div class="button-innter">   <!-- /* btn整体边框内余白,背景颜色，边框颜色 */ -->
+                      <div class="button-front"><!-- /* 内里三元素内余白，间隔，btn整体高度 */ -->
+                        <div class="yajirusi-front"><!-- hover球 大小，位置，背景-->
+                          <span class="material-symbols-outlined">
+                            arrow_forward
+                          </span>       
+                        </div>
+                        <div class="text"><!-- 文本滑动区域 ,文字box，高度，宽度 -->
+                          <p>View More</p>
+                          <p>View More</p>
+                        </div>
+                        <div class="yajirusi-hover"><!-- /* 原始球，球背景，大小，初始位置 */ -->
+                          <span class="material-symbols-outlined">
+                          arrow_forward
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="cards card-6" data-rotate="x" data-tilt="-7">
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <h3>特待生制度</h3>
+                <p>SS特待生年間</p>
+                <p class="shuzi">
+                  <span class="stat counter"
+                        data-target="50">
+                      0
+                  </span>万円
+                </p>
+                <p>免除</p>
+              </div>
+              <div class="flip-back">
+                <p>Back</p>
+                <div class="viewmorebtn">
+                  <a href="https://www.sanko.ac.jp/tokyo-med/guidelines/scholarship.html">
+                    <div class="button-innter">   <!-- /* btn整体边框内余白,背景颜色，边框颜色 */ -->
+                      <div class="button-front"><!-- /* 内里三元素内余白，间隔，btn整体高度 */ -->
+                        <div class="yajirusi-front"><!-- hover球 大小，位置，背景-->
+                          <span class="material-symbols-outlined">
+                            arrow_forward
+                          </span>       
+                        </div>
+                        <div class="text"><!-- 文本滑动区域 ,文字box，高度，宽度 -->
+                          <p>View More</p>
+                          <p>View More</p>
+                        </div>
+                        <div class="yajirusi-hover"><!-- /* 原始球，球背景，大小，初始位置 */ -->
+                          <span class="material-symbols-outlined">
+                          arrow_forward
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="gakkasyoukai">
+      <div class="bg-marquee">
+        <div class="marquee-track">
+          <span>COURSE</span>
+          <span>COURSE</span>
+          <span>COURSE</span>
+          <span>COURSE</span>
+          <span>COURSE</span>
+        </div>
+      </div>
+      <div class="content">
+        <div class="gakkateima">
+          <h2>学科･コース</h2>
+          <h3>COURSE</h3>
+        </div>
+          <ul>
+            <li data-gakka="iryou">
+              <img src="images/logos/gakka/iryou-hisho-jimu.svg" alt="">
+            </li>
+            <li data-gakka="kodomo">
+              <img src="images/logos/gakka/kodomo.svg" alt="">
+            </li>
+            <li data-gakka="kusuri">
+              <img src="images/logos/gakka/kusuri-adviser.svg" alt="">
+            </li>
+            <li data-gakka="sika">
+              <img src="images/logos/gakka/sika-eisei.svg" alt="">
+            </li>
+            <li data-gakka="sinryou">
+              <img src="images/logos/gakka/sinryou-jouhou.svg" alt="">
+            </li>
+            <li data-gakka="webit">
+              <img src="images/logos/gakka/web-it.svg" alt="">
+            </li>
+          </ul>
+
+          <div class="imagebox">
+            <div class="merodiimages">
+              <img src="images/merodis/jingdian1.png" alt="">
+            </div>
+            <p class="name">
+              医療秘書・医師事務コース
+            </p>
+            <p class="text">
+              病院実習や資格取得を通して、<br>
+              医療秘書・医療事務の専門知識と技術を2年間で学びます。
+            </p>
+          </div>
+        <div class="bottons">
+          <div class="back">
+            <p>Back</p>
+          </div>
+          <div class="next">
+            <p>Next</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  <section class="secopencampus">
+    <div class="memory-carousel">
+      <h2 class="title">オープンキャンパス<br><span>Opencampus</span></h2>
+
+      <div class="carousel">
+        <button class="nav prev">&lt;</button>
+
+        <ul class="track">
+          <li class="card"><img src="images/open/top_0215.jpg"></li>
+          <li class="card"><img src="images/open/top_0221.jpg"></li>
+          <li class="card"><img src="images/open/top_0221sakidorinyusetu.jpg"></li>
+          <li class="card"><img src="images/open/top_0301SPOC.jpg"></li>
+          <li class="card"><img src="images/open/top_0308.jpg"></li>
+          <li class="card"><img src="images/open/top_0314.jpg"></li>
+          <li class="card"><img src="images/open/top_0321SPOC.jpg"></li>
+          <li class="card"><img src="images/open/top_03223.jpg"></li>
+          <li class="card"><img src="images/open/top_0325.jpg"></li>
+          <li class="card"><img src="images/open/top_donichisyukumini.jpg"></li>
+          <li class="card"><img src="images/open/top_newheijitsu.jpg"></li>
+        </ul>
+
+        <button class="nav next">&gt;</button>    
+      </div>
+    </div>
+    
+    
+  </section>
+
+  </div>
+
+</body>
+  <!-- ----------JavaScript------------ -->
+    <!-- button导入 -->
+  <script src="js/button.js"></script>
+  <!-- 分割文字导入 -->
+  <script src="js/splittext.js"></script>
+  <!-- 地图路径（maplujing） -->
+  <script src="js/maplujing.js"></script>
+  <!-- 卡片反转引入 -->
+  <script src="js/cards.js"></script>
+  <!-- 学科控制层导入 -->
+  <script src="js/gakka.js"></script>
+  <!-- 通用jsdaoru -->
+  <script src="js/script.js"></script>
+  <!-- 学校开放日轮播图片 -->
+  <script src="js/opencampus.js"></script>
+
+</html>
